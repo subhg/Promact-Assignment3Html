@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 50px;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        .gender-group {
+            display: inline-flex;
+            gap: 5px;
+        }
+
+        .coding-languages-group {
+            display: block;
+            gap: 5px;
+        }
+
+        @media (min-width: 786px) {
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            div {
+                width: 48%;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+            }
+
+            .square-box {
+                width: 100%;
+            }
+
+            .coding-languages-group {
+                display: flex;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div> <label for="firstName">First Name</label> <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div> <label for="lastName">Last Name</label> <input type="text" id="lastName" name="lastName" required> </div>
+        <div> <label for="email">Email</label> <input type="email" id="email" name="email" required> </div>
+        <div> <label for="contactNumber">Contact Number</label> <input type="tel" id="contactNumber"
+                name="contactNumber" required> </div>
+        <div> <label for="username">Username</label> <input type="text" id="username" name="username" required> </div>
+        <div> <label for="password">Password</label> <input type="password" id="password" name="password" required>
+        </div>
+        <div> <label for="address">Address</label> <textarea id="address" name="address" required></textarea> </div>
+        <div> <label>Gender</label>
+            <div class="gender-group"> <input type="radio" id="male" name="gender" value="male"> <label
+                    for="male">Male</label> <input type="radio" id="female" name="gender" value="female"> <label
+                    for="female">Female</label> </div>
+        </div>
+        <div> <label for="qualification">Qualification</label> <select id="qualification" name="qualification" required>
+                <option value="" disabled selected>Select</option>
+                <option value="highschool">High School</option>
+                <option value="college">College</option>
+                <option value="university">University</option>
+            </select> </div>
+        <div> <label for="experience">Experience</label> <select id="experience" name="experience" required>
+                <option value="" disabled selected>Select</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select> </div>
+        <div class="square-box"> <label>Coding Languages</label>
+            <div class="coding-languages-group">
+                <div style="display: inline-flex;"> <input type="checkbox" id="c" name="codingLanguages[]" value="C">
+                    <label for="c">C/C++</label> </div>
+                <div style="display: inline-flex;"> <input type="checkbox" id="java" name="codingLanguages[]"
+                        value="Java"> <label for="java">Java</label> </div>
+                <div style="display: inline-flex;"> <input type="checkbox" id="csharp" name="codingLanguages[]"
+                        value="C#"> <label for="csharp">C#</label> </div>
+                <div style="display: inline-flex;"> <input type="checkbox" id="python" name="codingLanguages[]"
+                        value="Python"> <label for="python">Python</label> </div>
+                <div style="display: inline-flex;"> <input type="checkbox" id="php" name="codingLanguages[]"
+                        value="PHP"> <label for="php">PHP</label> </div>
+            </div>
+        </div> <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
